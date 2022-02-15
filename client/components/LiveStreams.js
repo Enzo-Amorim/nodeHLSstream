@@ -16,12 +16,14 @@ export default class Navbar extends React.Component {
   }
 
   getLiveStreams() {
-    axios.get("http://127.0.0.1:" + "8888" + "/api/streams").then((res) => {
-      let streams = res.data;
-      if (typeof (streams["live"] !== "undefined")) {
-        this.getStreamsInfo(streams["live"]);
-      }
-    });
+    axios
+      .get("http://server.allsmartedu.com:" + "8888" + "/api/streams")
+      .then((res) => {
+        let streams = res.data;
+        if (typeof (streams["live"] !== "undefined")) {
+          this.getStreamsInfo(streams["live"]);
+        }
+      });
   }
 
   getStreamsInfo(live_streams) {

@@ -29,7 +29,7 @@ export default class VideoPlayer extends React.Component {
               sources: [
                 {
                   src:
-                    "http://127.0.0.1:" +
+                    "http://server.allsmartedu.com:" +
                     "8888" +
                     "/live/" +
                     res.data.stream_key +
